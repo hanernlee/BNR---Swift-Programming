@@ -1,1 +1,1 @@
-Big Nerd Ranch Swift Programming Challenges & Examples
+Big Nerd Ranch - Swift Programming Challenges & Examples
