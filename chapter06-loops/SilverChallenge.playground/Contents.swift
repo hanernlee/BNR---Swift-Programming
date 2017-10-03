@@ -39,7 +39,7 @@ while shields > 0 {
         print("You beat the game!")
         break
     }
-    
+
     if (blastersOverheating) {
         print("Blasters are overheated. Cooldown initiated")
         sleep(5)
@@ -48,14 +48,14 @@ while shields > 0 {
         blastersOverheating = false
         blasterFireCount = 0
     }
-    
+
     if (blasterFireCount > 100) {
         blastersOverheating = true
         continue // jumps back to top of the loop
     }
-    
+
     print("Fire Blasters!")
-    
+
     blasterFireCount += 1
     spaceDemonsDestroyed += 1
 }
@@ -77,9 +77,9 @@ for i in 1...100 {
 
 var j: Int = 1
 // Switch
-while j <= 10 {
-    let divisibleBy3 = number % 3
-    let divisibleBy5 = number % 5
+while j <= 100 {
+    let divisibleBy3 = j % 3
+    let divisibleBy5 = j % 5
     let divisibles = (divisibleBy3, divisibleBy5)
     switch (divisibles) {
     case (0, _):
