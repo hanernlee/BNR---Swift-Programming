@@ -17,8 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VN6-2M-T67">
+                                <rect key="frame" x="315" y="31" width="40" height="25"/>
+                                <state key="normal" title="Insert"/>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CgB-CJ-IKY"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To-do Item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ygO-La-iAy">
-                                <rect key="frame" x="20" y="31" width="264" height="30"/>
+                                <rect key="frame" x="20" y="29" width="264" height="32"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -27,18 +34,22 @@
                                 <rect key="frame" x="20" y="69" width="335" height="578"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VN6-2M-T67">
-                                <rect key="frame" x="315" y="31" width="40" height="30"/>
-                                <state key="normal" title="Insert"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXD-FB-MGz">
+                                <rect key="frame" x="314" y="29" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
                                 <connections>
-                                    <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CgB-CJ-IKY"/>
+                                    <action selector="doneButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="52c-mw-YPc"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ofl-tC-sUP" firstAttribute="top" secondItem="VN6-2M-T67" secondAttribute="bottom" constant="13" id="AKT-KQ-3fu"/>
                             <constraint firstItem="ygO-La-iAy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Kga-GO-bDd"/>
+                            <constraint firstItem="RXD-FB-MGz" firstAttribute="leading" secondItem="ygO-La-iAy" secondAttribute="trailing" constant="30" id="Qzk-bc-fHg"/>
                             <constraint firstItem="ofl-tC-sUP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="SSN-6K-hi8"/>
+                            <constraint firstItem="RXD-FB-MGz" firstAttribute="top" secondItem="ygO-La-iAy" secondAttribute="top" id="f1t-dP-s4H"/>
+                            <constraint firstItem="RXD-FB-MGz" firstAttribute="centerY" secondItem="VN6-2M-T67" secondAttribute="centerY" id="f6W-4y-M8d"/>
                             <constraint firstItem="ofl-tC-sUP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="49" id="hxQ-PT-4Uq"/>
                             <constraint firstItem="VN6-2M-T67" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11" id="nLO-Y9-dfg"/>
                             <constraint firstItem="VN6-2M-T67" firstAttribute="leading" secondItem="ygO-La-iAy" secondAttribute="trailing" constant="31" id="nzK-76-uXu"/>
@@ -51,6 +62,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="doneButton" destination="RXD-FB-MGz" id="G6W-0f-ced"/>
+                        <outlet property="insertButton" destination="VN6-2M-T67" id="rnl-ND-uPQ"/>
                         <outlet property="itemTextField" destination="ygO-La-iAy" id="JLW-DK-qZu"/>
                         <outlet property="tableField" destination="ofl-tC-sUP" id="RId-yA-8iH"/>
                     </connections>
